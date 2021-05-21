@@ -1,7 +1,7 @@
-from time import sleep
 from pyA20.gpio import gpio
 from pyA20.gpio import port
-
+from time import sleep
+from orangepwm import *
 gpio.init ()
 
 #RGB values in %
