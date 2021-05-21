@@ -25,9 +25,13 @@ led4B =OrangePwm(100,port.PA14)
 
 i=1
 led1R.start(0)
+led1G.start(0)
 led2R.start(0)
+led2G.start(0)
 led3R.start(0)
+led3G.start(0)
 led4R.start(0)
+led4G.start(0)
 try:
   while True:
     if i !=100:
