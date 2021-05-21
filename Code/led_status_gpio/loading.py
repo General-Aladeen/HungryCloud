@@ -65,5 +65,15 @@ try:
 
                 i = i+1
 except KeyboardInterrupt:
-        python all-off.py
-        print ("Goodbye.")
+        gpio.output (led1R, gpio.HIGH)
+        gpio.output (led1G, gpio.HIGH)
+        gpio.output (led1B, gpio.HIGH)
+        gpio.output (led2R, gpio.HIGH)
+        gpio.output (led2G, gpio.HIGH)
+        gpio.output (led2B, gpio.HIGH)
+        gpio.output (led3R, gpio.HIGH)
+        gpio.output (led3G, gpio.HIGH)
+        gpio.output (led3B, gpio.HIGH)
+        gpio.output (led4R, gpio.HIGH)
+        gpio.output (led4G, gpio.HIGH)
+        gpio.output (led4B, gpio.HIGH)
