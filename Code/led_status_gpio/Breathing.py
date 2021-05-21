@@ -4,16 +4,11 @@ from time import sleep
 from orangepwm import *
 
 gpio.init()
-
 pwm = OrangePwm(100, port.PA6)
-
-pwm.start(20)
-sleep(2)
-
-pwm.changeDutyCycle(6)
-sleep(2)
-
-pwm.changeFrequency(10)
-sleep(2)
-
+i=1
+pwm.start(100)
+while i!=100:
+  pwm.changeDutyCycle(i)
+  sleep(0.1)
+  i=i+1
 pwm.stop()
