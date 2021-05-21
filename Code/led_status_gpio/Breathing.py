@@ -29,15 +29,15 @@ try:
   while True:
     if i !=100:
       while i!=100:
-        pwm.changeDutyCycle(i)
+        led1R.changeDutyCycle(i)
         sleep(0.01)
         i=i+1
     else :
       while i!=0:
-        pwm.changeDutyCycle(i)
+        led1R.changeDutyCycle(i)
         sleep(0.006)
         i=i-1
 except KeyboardInterrupt:
-    pwm.stop()
+    led1R.stop()
     print ("Done")
 
