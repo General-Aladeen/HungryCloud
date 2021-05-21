@@ -25,19 +25,31 @@ led4B =OrangePwm(100,port.PA14)
 
 i=1
 led1R.start(0)
+led2R.start(0)
+led3R.start(0)
+led4R.start(0)
 try:
   while True:
     if i !=100:
       while i!=100:
         led1R.changeDutyCycle(i)
+        led2R.changeDutyCycle(i)
+        led3R.changeDutyCycle(i)
+        led4R.changeDutyCycle(i)
         sleep(0.01)
         i=i+1
     else :
       while i!=0:
         led1R.changeDutyCycle(i)
+        led2R.changeDutyCycle(i)
+        led3R.changeDutyCycle(i)
+        led4R.changeDutyCycle(i)
         sleep(0.006)
         i=i-1
 except KeyboardInterrupt:
     led1R.stop()
+    led2R.stop()
+    led3R.stop()
+    led4R.stop()
     print ("Done")
 
