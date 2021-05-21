@@ -1,3 +1,9 @@
+from time import sleep
+from pyA20.gpio import gpio
+from pyA20.gpio import port
+
+gpio.init ()
+
 #RGB values in %
 R = input('R = ')
 G = input('G = ')
@@ -55,18 +61,3 @@ except KeyboardInterrupt:
     led4G.stop()
     led4B.stop()
     print ("Done")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
