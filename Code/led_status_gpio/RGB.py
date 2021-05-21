@@ -24,22 +24,22 @@ led4B =OrangePwm(100,port.PA14)
 R = 100-R
 G = 100-G
 B = 100-B
+try:
+    led1R.start(R)
+    led1G.start(G)
+    led1B.start(B)
 
-led1R.start(R)
-led1G.start(G)
-led1B.start(B)
+    led2R.start(R)
+    led2G.start(G)
+    led2B.start(B)
 
-led2R.start(R)
-led2G.start(G)
-led2B.start(B)
+    led3R.start(R)
+    led3G.start(G)
+    led3B.start(B)
 
-led3R.start(R)
-led3G.start(G)
-led3B.start(B)
-
-led4R.start(R)
-led4G.start(G)
-led4B.start(B)
+    led4R.start(R)
+    led4G.start(G)
+    led4B.start(B)
 
 except KeyboardInterrupt:
     led1R.stop()
