@@ -22,7 +22,7 @@ led4R = port.PA16
 led4G = port.PA15
 led4B = port.PA14
 
-pwm = OrangePwm(100, led1R)
+pwm3 = OrangePwm(100, led1R)
 pwm = OrangePwm(100, led1G)
 pwm = OrangePwm(100, led1B)
 
@@ -40,7 +40,7 @@ pwm = OrangePwm(100, led4B)
 
 
 i=1
-pwm.start(led1R,0)
+pwm.start(pwm3,0)
 try:
   while True:
     if i !=100:
