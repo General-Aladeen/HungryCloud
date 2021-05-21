@@ -13,7 +13,7 @@ while True:
       pwm.changeDutyCycle(i)
       sleep(0.01)
       i=i+1
-  else 
+  else :
     while i!=0:
       pwm.changeDutyCycle(i)
       sleep(0.01)
