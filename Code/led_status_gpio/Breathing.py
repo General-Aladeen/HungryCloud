@@ -6,7 +6,7 @@ from orangepwm import *
 gpio.init()
 pwm = OrangePwm(100, port.PA6)
 i=1
-pwm.start(100)
+pwm.start(0)
 while i!=100:
   pwm.changeDutyCycle(i)
   sleep(0.1)
