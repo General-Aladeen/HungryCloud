@@ -9,6 +9,6 @@ i=1
 pwm.start(0)
 while i!=100:
   pwm.changeDutyCycle(i)
-  sleep(0.1)
+  sleep(0.001)
   i=i+1
 pwm.stop()
