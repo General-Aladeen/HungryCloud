@@ -46,23 +46,17 @@ i = 0
 try:
         while True:
                 gpio.output (led1R, gpio.LOW)
-
                 sleep (0.12)
                 gpio.output (led1R, gpio.HIGH)
-
                 gpio.output (led2R, gpio.LOW)
                 sleep (0.12)
                 gpio.output (led2R, gpio.HIGH)
-
                 gpio.output (led4R, gpio.LOW)
                 sleep (0.12)
                 gpio.output (led4R, gpio.HIGH)
-
                 gpio.output (led3R, gpio.LOW)
-
                 sleep (0.12)
                 gpio.output (led3R, gpio.HIGH)
-
                 i = i+1
 except KeyboardInterrupt:
         gpio.output (led1R, gpio.HIGH)
