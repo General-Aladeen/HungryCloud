@@ -2,7 +2,7 @@ from time import sleep
 from pyA20.gpio import gpio
 from pyA20.gpio import port
 
-
+#hi
 gpio.init ()
 
 #LED 1 (TOP RIGHT)
