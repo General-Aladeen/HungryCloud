@@ -4,7 +4,7 @@ from time import sleep
 from orangepwm import *
 
 gpio.init()
-
+#text to fix bug lmao ^.^ 
 #LED 1 (TOP RIGHT)
 led1R=OrangePwm(100, port.PA0)
 led1G=OrangePwm(100, port.PA1)
