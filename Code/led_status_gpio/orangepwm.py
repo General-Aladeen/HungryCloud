@@ -2,7 +2,7 @@ from pyA20.gpio import gpio as GPIO
 from pyA20.gpio import port
 import threading
 import time
- 
+#g
 class OrangePwm(threading.Thread):
 
   def __init__(self, frequency, gpioPin, gpioScheme=0):
