@@ -1,3 +1,4 @@
+import requests 
 url = "http://www.kite.com"
 timeout = 5
 try:
