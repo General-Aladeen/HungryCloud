@@ -107,7 +107,22 @@ led4R =OrangePwm(100,port.PA16)
 led4G =OrangePwm(100,port.PA15)
 led4B =OrangePwm(100,port.PA14)
 
-
+led1G.start(100)
+#led1G.start(0)
+led2G.start(100)
+#led2G.start(0)
+led3G.start(100)
+#led3G.start(0)
+led4G.start(100)
+#led4G.start(0)
+led1R.start(100)
+#led1G.start(0)
+led2R.start(100)
+#led2G.start(0)
+led3R.start(100)
+#led3G.start(0
+led4R.start(100)
+#led4G.start(0)
 
 
 while True:
@@ -120,14 +135,7 @@ while True:
 		beep = 0
 		print (beep)
 	if beep == 0:
-		led1R.start(0)
-		#led1G.start(0)
-		led2R.start(0)
-		#led2G.start(0)
-		led3R.start(0)
-		#led3G.start(0)
-		led4R.start(0)
-		#led4G.start(0)
+
 		if i !=100:
 			while i!=100:
 				led1R.changeDutyCycle(i)
@@ -145,14 +153,7 @@ while True:
 				sleep(0.006)
 				i=i-1
 	else:
-		led1G.start(0)
-		#led1G.start(0)
-		led2G.start(0)
-		#led2G.start(0)
-		led3G.start(0)
-		#led3G.start(0)
-		led4G.start(0)
-		#led4G.start(0)
+
 		led1G.changeDutyCycle(0)
 		led2G.changeDutyCycle(0)
 		led3G.changeDutyCycle(0)
