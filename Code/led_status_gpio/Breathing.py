@@ -133,7 +133,7 @@ while True:
 		beep = 1
 	except:
 		beep = 0
-		print (beep)
+	print (beep)
 	if beep == 0:
 
 		if i !=100:
