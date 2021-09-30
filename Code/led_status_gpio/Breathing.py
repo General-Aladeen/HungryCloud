@@ -139,8 +139,7 @@ try:
 			except:
 				intcheck = 0
 				print (intcheck)
-		if intcheck == 0:
-			
+		if intcheck == 0:		
 			if i !=100:
 				while i!=100:
 					led1R.changeDutyCycle(i)
@@ -157,10 +156,10 @@ try:
 					led4R.changeDutyCycle(i)
 					sleep(0.006)
 					i=i-1
-			else:				
-				led1G.changeDutyCycle(0)
-				led2G.changeDutyCycle(0)
-				led3G.changeDutyCycle(0)
-				led4G.changeDutyCycle(0)
+		else:				
+			led1G.changeDutyCycle(0)
+			led2G.changeDutyCycle(0)
+			led3G.changeDutyCycle(0)
+			led4G.changeDutyCycle(0)
 	
 
