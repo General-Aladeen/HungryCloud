@@ -16,7 +16,7 @@ def segs():
     intcheck = 4
     return 0
 
-f __name__ == '__main__':
+if __name__ == '__main__':
     # counter is an infinite iterator
     counter = count(0)
     p1 = Process(target=intern, name='Process_inc_forever')
