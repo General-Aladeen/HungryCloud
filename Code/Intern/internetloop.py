@@ -29,6 +29,7 @@ while i == 0:
         p1.start()
         p2.start()
         time.sleep(12)
-        if b == 10:
+        var = segs()
+        if var == 10:
           p1.terminate
         p2.terminate
