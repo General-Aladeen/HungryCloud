@@ -115,11 +115,11 @@ while True:
 	try :
 		stri = "https://www.google.co.in"
 		data = urllib.urlopen(stri)
-		intcheck = 1
+		beep = 1
 	except:
-		intcheck = 0
-		print (intcheck)
-	if intcheck == 0:
+		beep = 0
+		print (beep)
+	if beep == 0:
 		led1R.start(0)
 		#led1G.start(0)
 		led2R.start(0)
