@@ -4,7 +4,7 @@ from pyA20.gpio import port
 from time import sleep
 import threading
 import time
- 
+
 class OrangePwm(threading.Thread):
 
   def __init__(self, frequency, gpioPin, gpioScheme=0):
@@ -75,7 +75,6 @@ class OrangePwm(threading.Thread):
     self.baseTime = 1.0 / frequency
     self.sliceTime = self.baseTime / self.maxCycle
 
-
   def stop(self):
     """
     Stops PWM output.
@@ -108,38 +107,60 @@ led4R =OrangePwm(100,port.PA16)
 led4G =OrangePwm(100,port.PA15)
 led4B =OrangePwm(100,port.PA14)
 
+def alloff():
+	gpio.output (led1R, gpio.HIGH)
+	gpio.output (led1G, gpio.HIGH)
+	gpio.output (led1B, gpio.HIGH)
+	gpio.output (led2R, gpio.HIGH)
+	gpio.output (led2G, gpio.HIGH)
+	gpio.output (led2B, gpio.HIGH)
+	gpio.output (led3R, gpio.HIGH)
+	gpio.output (led3G, gpio.HIGH)
+	gpio.output (led3B, gpio.HIGH)
+	gpio.output (led4R, gpio.HIGH)
+	gpio.output (led4G, gpio.HIGH)
+	gpio.output (led4B, gpio.HIGH)
+i=1
+led1R.start(0)
+#led1G.start(0)
+led2R.start(0)
+#led2G.start(0)
+led3R.start(0)
+#led3G.start(0)
+led4R.start(0)
+#led4G.start(0)
+try:
+  while True:
+		while i == 0:
+			try :
+				stri = "https://www.google.co.in"
+				data = urllib.urlopen(stri)
+				intcheck = 1
+			except:
+				intcheck = 0
+				print (intcheck)
+		if intcheck == 0:
+			
+			if i !=100:
+				while i!=100:
+					led1R.changeDutyCycle(i)
+					led2R.changeDutyCycle(i)
+					led3R.changeDutyCycle(i)
+					led4R.changeDutyCycle(i)
+					sleep(0.01)
+					i=i+1
+			else :
+			 while i!=0:
+					led1R.changeDutyCycle(i)
+					led2R.changeDutyCycle(i)
+					led3R.changeDutyCycle(i)
+					led4R.changeDutyCycle(i)
+					sleep(0.006)
+					i=i-1
+			else:				
+				led1G.changeDutyCycle(0)
+				led2G.changeDutyCycle(0)
+				led3G.changeDutyCycle(0)
+				led4G.changeDutyCycle(0)
+	
 
-
-
-def redbreath():
- i=1
- led1R.start(0)
- #led1G.start(0)
- led2R.start(0)
- #led2G.start(0)
- led3R.start(0)
- #led3G.start(0)
- led4R.start(0)
- #led4G.start(0)
- try:
-   while True:
-     if i !=100:
-       while i!=100:
-         led1R.changeDutyCycle(i)
-         led2R.changeDutyCycle(i)
-         led3R.changeDutyCycle(i)
-         led4R.changeDutyCycle(i)
-         sleep(0.01)
-         i=i+1
-     else :
-       while i!=0:
-         led1R.changeDutyCycle(i)
-         led2R.changeDutyCycle(i)
-         led3R.changeDutyCycle(i)
-         led4R.changeDutyCycle(i)
-         sleep(0.006)
-         i=i-1
-
-
-    
-redbreath()
