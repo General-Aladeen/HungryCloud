@@ -1,26 +1,10 @@
-from datetime import datetime
-import time, os, requests
-from termcolor import colored
+import os
+def check_internet():
+    cmd = os.system('ping google.com -w 4 > clear')
+    if cmd == 0:
+        print('Internet is connected')
+    else:
+        print('Internet is not connected')
 
-os.system('color')
-url = 'https://www.google.com/'
-timeout = 2
-sleep_time = 10
-op = None
-
-while True:
-    now = datetime.now()
-    try:
-        op = requests.get(url, timeout=timeout).status_code
-        if op == 200:
-            print(now, colored("Connected", "green"))
-            sleep_time = 10
-        else:
-            print(now, colored("Status Code is not 200", "red"))
-            print("status Code", op)
-    except:
-        print(now, colored("Not Connected", "red"))
-        print("status Code", op)
-        sleep_time = 5
-    time.sleep(sleep_time)
-    
+if __name__ == '__main__':
+    check_internet()
