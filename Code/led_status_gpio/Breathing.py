@@ -129,35 +129,35 @@ led3R.start(0)
 #led3G.start(0)
 led4R.start(0)
 #led4G.start(0)
-try:
-  while True:
-		while i == 0:
-			try :
-				stri = "https://www.google.co.in"
-				data = urllib.urlopen(stri)
-				intcheck = 1
-			except:
-				intcheck = 0
-				print (intcheck)
-		if intcheck == 0:		
-			if i !=100:
-				while i!=100:
-					led1R.changeDutyCycle(i)
-					led2R.changeDutyCycle(i)
-					led3R.changeDutyCycle(i)
-					led4R.changeDutyCycle(i)
-					sleep(0.01)
-					i=i+1
-			else :
-			 while i!=0:
-					led1R.changeDutyCycle(i)
-					led2R.changeDutyCycle(i)
-					led3R.changeDutyCycle(i)
-					led4R.changeDutyCycle(i)
-					sleep(0.006)
-					i=i-1
-		else:				
-			led1G.changeDutyCycle(0)
-			led2G.changeDutyCycle(0)
-			led3G.changeDutyCycle(0)
-			led4G.changeDutyCycle(0)
+
+while True:
+	while i == 0:
+		try :
+			stri = "https://www.google.co.in"
+			data = urllib.urlopen(stri)
+			intcheck = 1
+		except:
+			intcheck = 0
+			print (intcheck)
+	if intcheck == 0:		
+		if i !=100:
+			while i!=100:
+				led1R.changeDutyCycle(i)
+				led2R.changeDutyCycle(i)
+				led3R.changeDutyCycle(i)
+				led4R.changeDutyCycle(i)
+				sleep(0.01)
+				i=i+1
+		else :
+		 while i!=0:
+				led1R.changeDutyCycle(i)
+				led2R.changeDutyCycle(i)
+				led3R.changeDutyCycle(i)
+				led4R.changeDutyCycle(i)
+				sleep(0.006)
+				i=i-1
+	else:				
+		led1G.changeDutyCycle(0)
+		led2G.changeDutyCycle(0)
+		led3G.changeDutyCycle(0)
+		led4G.changeDutyCycle(0)
