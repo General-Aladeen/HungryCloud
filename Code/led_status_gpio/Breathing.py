@@ -135,7 +135,7 @@ while True:
 		beep = 0
 	print (beep)
 	if beep == 0:
-
+		i = 100	
 		if i !=100:
 			while i!=100:
 				led1R.changeDutyCycle(i)
