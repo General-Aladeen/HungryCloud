@@ -107,23 +107,11 @@ led4R =OrangePwm(100,port.PA16)
 led4G =OrangePwm(100,port.PA15)
 led4B =OrangePwm(100,port.PA14)
 
-def alloff():
-	gpio.output (led1R, gpio.HIGH)
-	gpio.output (led1G, gpio.HIGH)
-	gpio.output (led1B, gpio.HIGH)
-	gpio.output (led2R, gpio.HIGH)
-	gpio.output (led2G, gpio.HIGH)
-	gpio.output (led2B, gpio.HIGH)
-	gpio.output (led3R, gpio.HIGH)
-	gpio.output (led3G, gpio.HIGH)
-	gpio.output (led3B, gpio.HIGH)
-	gpio.output (led4R, gpio.HIGH)
-	gpio.output (led4G, gpio.HIGH)
-	gpio.output (led4B, gpio.HIGH)
-i=1
+
 
 
 while True:
+	i=0
 	while i == 0:
 		try :
 			stri = "https://www.google.co.in"
