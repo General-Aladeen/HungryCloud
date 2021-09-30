@@ -1,8 +1,7 @@
-import requests 
-url = "http://www.kite.com"
-timeout = 5
-try:
-	request = requests.get(url, timeout=timeout)
-	print("Connected to the Internet")
-except:
-	(requests.ConnectionError, requests.Timeout) as exception:
+import urllib
+try :
+    stri = "https://www.google.co.in"
+    data = urllib.urlopen(stri)
+    print "Connected"
+except e:
+    print "not connected" ,e 
