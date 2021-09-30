@@ -111,15 +111,14 @@ led4B =OrangePwm(100,port.PA14)
 
 
 while True:
-	i=0
-	while i == 0:
-		try :
-			stri = "https://www.google.co.in"
-			data = urllib.urlopen(stri)
-			intcheck = 1
-		except:
-			intcheck = 0
-			print (intcheck)
+	
+	try :
+		stri = "https://www.google.co.in"
+		data = urllib.urlopen(stri)
+		intcheck = 1
+	except:
+		intcheck = 0
+		print (intcheck)
 	if intcheck == 0:
 		led1R.start(0)
 		#led1G.start(0)
