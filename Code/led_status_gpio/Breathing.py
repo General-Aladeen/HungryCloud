@@ -139,35 +139,7 @@ def redbreath():
          led4R.changeDutyCycle(i)
          sleep(0.006)
          i=i-1
-def greenbreath():
- i=1
- led1G.start(0)
- #led1G.start(0)
- led2G.start(0)
- #led2G.start(0)
- led3G.start(0)
- #led3G.start(0)
- led4G.start(0)
- #led4G.start(0)
- try:
-   while True:
-     if i !=100:
-       while i!=100:
-         led1G.changeDutyCycle(i)
-         led2G.changeDutyCycle(i)
-         led3G.changeDutyCycle(i)
-         led4G.changeDutyCycle(i)
-         sleep(0.01)
-         i=i+1
-     else :
-       while i!=0:
-         led1G.changeDutyCycle(i)
-         led2G.changeDutyCycle(i)
-         led3G.changeDutyCycle(i)
-         led4G.changeDutyCycle(i)
-         sleep(0.006)
-         i=i-1
 
 
     
-greenbreath()
+redbreath()
