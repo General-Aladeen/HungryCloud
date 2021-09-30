@@ -161,5 +161,3 @@ try:
 			led2G.changeDutyCycle(0)
 			led3G.changeDutyCycle(0)
 			led4G.changeDutyCycle(0)
-	
-
