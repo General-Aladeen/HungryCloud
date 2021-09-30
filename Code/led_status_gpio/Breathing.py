@@ -135,10 +135,10 @@ while True:
 		beep = 0
 	print (beep)
 	if beep == 0:
-		led1R.changeDutyCycle(0)
-		led2R.changeDutyCycle(0)
-		led3R.changeDutyCycle(0)
-		led4R.changeDutyCycle(0)
+		led1G.changeDutyCycle(100)
+		led2G.changeDutyCycle(100)
+		led3G.changeDutyCycle(100)
+		led4G.changeDutyCycle(100)
 		i = 100	
 		if i !=100:
 			while i!=100:
