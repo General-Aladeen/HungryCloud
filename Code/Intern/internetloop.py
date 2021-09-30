@@ -28,7 +28,7 @@ if __name__ == '__main__':
     p1.terminate()
     p2.terminate()
 if p1.exitcode is None:
-       print(f'Oops, {p1} timeouts!')
+       print("hi")
 if p2.exitcode == 0:
-        print(f'{p2} is luck and finishes in 5 seconds!')
+        print("bai")
 
