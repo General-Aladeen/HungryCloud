@@ -6,5 +6,4 @@ def check_internet():
     else:
         print('Internet is not connected')
 
-if __name__ == '__main__':
-    check_internet()
+check_internet()
