@@ -108,34 +108,34 @@ led4R =OrangePwm(100,port.PA16)
 led4G =OrangePwm(100,port.PA15)
 led4B =OrangePwm(100,port.PA14)
 
-
-i=1
-led1R.start(0)
-#led1G.start(0)
-led2R.start(0)
-#led2G.start(0)
-led3R.start(0)
-#led3G.start(0)
-led4R.start(0)
-#led4G.start(0)
-try:
-  while True:
-    if i !=100:
-      while i!=100:
-        led1R.changeDutyCycle(i)
-        led2R.changeDutyCycle(i)
-        led3R.changeDutyCycle(i)
-        led4R.changeDutyCycle(i)
-        sleep(0.01)
-        i=i+1
-    else :
-      while i!=0:
-        led1R.changeDutyCycle(i)
-        led2R.changeDutyCycle(i)
-        led3R.changeDutyCycle(i)
-        led4R.changeDutyCycle(i)
-        sleep(0.006)
-        i=i-1
+def redbreath():
+ i=1
+ led1R.start(0)
+ #led1G.start(0)
+ led2R.start(0)
+ #led2G.start(0)
+ led3R.start(0)
+ #led3G.start(0)
+ led4R.start(0)
+ #led4G.start(0)
+ try:
+   while True:
+     if i !=100:
+       while i!=100:
+         led1R.changeDutyCycle(i)
+         led2R.changeDutyCycle(i)
+         led3R.changeDutyCycle(i)
+         led4R.changeDutyCycle(i)
+         sleep(0.01)
+         i=i+1
+     else :
+       while i!=0:
+         led1R.changeDutyCycle(i)
+         led2R.changeDutyCycle(i)
+         led3R.changeDutyCycle(i)
+         led4R.changeDutyCycle(i)
+         sleep(0.006)
+         i=i-1
 except KeyboardInterrupt:
     led1R.stop()
     led2R.stop()
@@ -143,3 +143,38 @@ except KeyboardInterrupt:
     led4R.stop()
     print ("Done")
 
+    
+def greenbreath():
+ i=1
+ led1G.start(0)
+ #led1G.start(0)
+ led2G.start(0)
+ #led2G.start(0)
+ led3G.start(0)
+ #led3G.start(0)
+ led4G.start(0)
+ #led4G.start(0)
+ try:
+   while True:
+     if i !=100:
+       while i!=100:
+         led1G.changeDutyCycle(i)
+         led2G.changeDutyCycle(i)
+         led3G.changeDutyCycle(i)
+         led4G.changeDutyCycle(i)
+         sleep(0.01)
+         i=i+1
+     else :
+       while i!=0:
+         led1G.changeDutyCycle(i)
+         led2G.changeDutyCycle(i)
+         led3G.changeDutyCycle(i)
+         led4G.changeDutyCycle(i)
+         sleep(0.006)
+         i=i-1
+except KeyboardInterrupt:
+    led1R.stop()
+    led2R.stop()
+    led3R.stop()
+    led4R.stop()
+    print ("Done")
