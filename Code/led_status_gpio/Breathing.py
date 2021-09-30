@@ -136,12 +136,7 @@ def redbreath():
          led4R.changeDutyCycle(i)
          sleep(0.006)
          i=i-1
-except KeyboardInterrupt:
-    led1R.stop()
-    led2R.stop()
-    led3R.stop()
-    led4R.stop()
-    print ("Done")
+
 
     
 def greenbreath():
@@ -172,12 +167,7 @@ def greenbreath():
          led4G.changeDutyCycle(i)
          sleep(0.006)
          i=i-1
-except KeyboardInterrupt:
-    led1R.stop()
-    led2R.stop()
-    led3R.stop()
-    led4R.stop()
-    print ("Done")
+
 
     
 greenbreath()
