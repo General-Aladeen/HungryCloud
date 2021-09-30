@@ -4,7 +4,7 @@ from pyA20.gpio import port
 from time import sleep
 import threading
 import time
-
+import urllib
 class OrangePwm(threading.Thread):
 
   def __init__(self, frequency, gpioPin, gpioScheme=0):
