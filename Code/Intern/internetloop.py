@@ -1,7 +1,7 @@
 import urllib
 intcheck=0
 i = 0
-for i in 0
+while i == 0
     try :
         stri = "https://www.google.co.in"
         data = urllib.urlopen(stri)
