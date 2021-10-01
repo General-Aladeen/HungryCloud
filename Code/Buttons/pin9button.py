@@ -1,3 +1,4 @@
+import RPi.GPIO as GPIO
 button = Button(9)
 
 while true:
