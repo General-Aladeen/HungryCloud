@@ -192,5 +192,7 @@ while True:
 		led2G.changeDutyCycle(0)
 		led3G.changeDutyCycle(0)
 		led4G.changeDutyCycle(0)
+		sleep(10)
+		print('sleeping 10 sec')
 
 
