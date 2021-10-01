@@ -10,7 +10,7 @@ import urllib2
 
 def internet_on():
     try:
-        response=urllib2.urlopen('https://www.google.co.in',timeout=5)
+        response=urllib2.urlopen('https://www.google.co.in',timeout=1)
         beep = 1
         return beep
     except urllib2.URLError as err:
