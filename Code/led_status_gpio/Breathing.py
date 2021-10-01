@@ -128,10 +128,9 @@ led4R.start(100)
 while True:
 	
 	try :
-		stri = "https://www.google.co.in"
-		data = urllib.urlopen(stri)
+		response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
 		beep = 1
-	except:
+	except urllib2.URLError as err: pass
 		beep = 0
 	print (beep)
 	if beep == 0:
