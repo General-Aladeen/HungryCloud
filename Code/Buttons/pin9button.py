@@ -1,7 +1,5 @@
 from pyA20.gpio import gpio as GPIO
 
-
-GPIO.setmode(GPIO.BCM)
 GPIO.setup(9, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 def Shutdown(channel):
