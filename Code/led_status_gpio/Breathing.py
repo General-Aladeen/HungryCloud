@@ -128,9 +128,10 @@ def internet_on():
         response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
 	check = 1
         return check
-    except urllib2.URLError as err: pass
+    except:		
+	urllib2.URLError as err: pass
 	check = 0
-    return check
+    	return check
 
 while True:
 	beep = internet_on()
