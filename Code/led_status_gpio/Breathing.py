@@ -144,7 +144,7 @@ def timeout(t, cmd, *args, **kwds):
 
 def open(url):
     response = urllib2.urlopen(url)
-
+i=100
 while True:
 	url = 'https://www.google.com/'
 	try:
@@ -153,6 +153,13 @@ while True:
 		print('connected')
 	except mp.TimeoutError as err:
 		beep = 0
+		while i!=100:
+			led1R.changeDutyCycle(i)
+			led2R.changeDutyCycle(i)
+			led3R.changeDutyCycle(i)
+			led4R.changeDutyCycle(i)
+			sleep(0.01)
+			i=i+1
 		print('timeout')
 	if beep == 0:
 		led1G.changeDutyCycle(100)
