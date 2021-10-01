@@ -123,17 +123,18 @@ led3R.start(100)
 #led3G.start(0
 led4R.start(100)
 #led4G.start(0)
-
+def internet_on():
+    try:
+        response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
+	check = 1
+        return check
+    except urllib2.URLError as err: pass
+	check = 0
+    return check
 
 while True:
-	
-	try :
-		response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
-		beep = 1
-	except:
-		urllib2.URLError as err: pass
-		beep = 0
-	print (beep)
+	beep = internet_on()
+	print(beep)
 	if beep == 0:
 		led1G.changeDutyCycle(100)
 		led2G.changeDutyCycle(100)
