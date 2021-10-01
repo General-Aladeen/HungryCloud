@@ -129,7 +129,6 @@ def internet_on():
 	check = 1
         return check
     except:		
-	urllib2.URLError as err: pass
 	check = 0
     	return check
 
