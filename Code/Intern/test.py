@@ -1,3 +1,4 @@
+i=0
 while i == 0:
   try :
     stri = "https://www.google.co.in"
