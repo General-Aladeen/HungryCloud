@@ -1,9 +1,6 @@
-
-import urllib
-def internet_on():
-    try:
-        response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
+try:
+	response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
 	check = 1
-    except:		
+except:	
 	check = 0
-print(internet_on())
+print(check)
