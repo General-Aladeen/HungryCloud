@@ -130,7 +130,8 @@ while True:
 	try :
 		response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
 		beep = 1
-	except urllib2.URLError as err: pass
+	except:
+		urllib2.URLError as err: pass
 		beep = 0
 	print (beep)
 	if beep == 0:
