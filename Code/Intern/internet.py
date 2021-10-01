@@ -16,10 +16,11 @@ def timeout(t, cmd, *args, **kwds):
 
 def open(url):
     response = urllib2.urlopen(url)
-    print('connected')
+   
 
 url = 'https://www.google.com/'
 try:
     timeout(5, open, url)
+    print('connected')
 except mp.TimeoutError as err:
     print('timeout')
