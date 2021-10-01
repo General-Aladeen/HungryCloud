@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+from pyA20.gpio import gpio as GPIO
 button = Button(9)
 
 while true:
