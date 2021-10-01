@@ -16,7 +16,7 @@ def timeout(t, cmd, *args, **kwds):
 
 def open(url):
     response = urllib2.urlopen(url)
-    print(response)
+    print('connected')
 
 url = 'https://www.google.com/'
 try:
