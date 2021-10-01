@@ -1,6 +1,8 @@
-try:
-	response=urllib2.urlopen('https://pyzuri.com/')
-	check = 1
-except:	
-	check = 0
-print(check)
+while i == 0:
+  try :
+          stri = "https://www.google.co.in"
+          data = urllib.urlopen(stri)
+          intcheck = 1
+      except:
+          intcheck = 0
+      print (intcheck)
