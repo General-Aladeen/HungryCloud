@@ -5,6 +5,13 @@ from time import sleep
 import threading
 import time
 import urllib
+import urllib2
+import socket
+import multiprocessing as mp
+
+
+
+
 class OrangePwm(threading.Thread):
 
   def __init__(self, frequency, gpioPin, gpioScheme=0):
@@ -123,18 +130,30 @@ led3R.start(100)
 #led3G.start(0
 led4R.start(100)
 #led4G.start(0)
-def internet_on():
+def timeout(t, cmd, *args, **kwds):
+    pool = mp.Pool(processes=1)
+    result = pool.apply_async(cmd, args=args, kwds=kwds)
     try:
-        response=urllib2.urlopen('https://pyzuri.com/',timeout=5)
-	check = 1
-        return check
-    except:		
-	check = 0
-    	return check
+        retval = result.get(timeout=t)
+    except mp.TimeoutError as err:
+        pool.terminate()
+        pool.join()
+        raise
+    else:
+        return retval
+
+def open(url):
+    response = urllib2.urlopen(url)
 
 while True:
-	beep = internet_on()
-	print(beep)
+	url = 'https://www.google.com/'
+	try:
+		timeout(5, open, url)
+		beep = 1
+		print('connected')
+	except mp.TimeoutError as err:
+		beep = 0
+		print('timeout')
 	if beep == 0:
 		led1G.changeDutyCycle(100)
 		led2G.changeDutyCycle(100)
