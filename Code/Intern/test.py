@@ -8,4 +8,4 @@ def internet_on():
     except:		
 	check = 0
     	return check
- print(internet_on())
+print(internet_on())
