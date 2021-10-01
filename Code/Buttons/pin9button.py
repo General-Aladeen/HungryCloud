@@ -1,5 +1,5 @@
 from pyA20.gpio import gpio as GPIO
-button = Button(9)
+
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(9, GPIO.IN, pull_up_down=GPIO.PUD_UP)
