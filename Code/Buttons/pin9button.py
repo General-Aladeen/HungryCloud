@@ -8,3 +8,6 @@ gpio.init()
 gpio.setcfg(port.PA19, gpio.INPUT)
 var = port.PA19
 print var
+
+gpio.pullup(port.PE11, 0)
+print port.PA19
