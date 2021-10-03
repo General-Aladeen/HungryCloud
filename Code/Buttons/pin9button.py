@@ -8,7 +8,7 @@ gpio.init()
 gpio.setcfg(port.PA19, gpio.INPUT)
 
 while True:
-  if gpio.input(port.PA19) == 1:
+  if gpio.input(port.PA19) == 0:
     print("ze button is pressed")
 
 
