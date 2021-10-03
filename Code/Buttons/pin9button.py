@@ -6,8 +6,7 @@ from pyA20.gpio import connector
 
 gpio.init()
 gpio.setcfg(port.PA19, gpio.INPUT)
-var = port.PA19
-print var
 
-gpio.pullup(port.PA19, 0)
-print port.PA19
+print gpio.input(port.PA19)
+
+
