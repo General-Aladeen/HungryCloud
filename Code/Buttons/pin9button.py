@@ -7,6 +7,8 @@ from pyA20.gpio import connector
 gpio.init()
 gpio.setcfg(port.PA19, gpio.INPUT)
 
-print gpio.input(port.PA19)
+while True:
+  if gpio.input(port.PA19) == 1:
+    print("ze button is pressed")
 
 
