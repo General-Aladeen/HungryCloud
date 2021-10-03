@@ -6,10 +6,14 @@ import time
 
 gpio.init()
 gpio.setcfg(port.PA19, gpio.INPUT)
-
+gpio.setcfg(port.PA18, gpio.INPUT)
 while True:
   if gpio.input(port.PA19) == 0:
-    print("ze button is pressed")
+    print("19th button")
     time.sleep(0.5)
+  if gpio.input(port.PA18) == 0:
+    print("18th Button")
+    time.sleep(0.5)
+ 
 
 
