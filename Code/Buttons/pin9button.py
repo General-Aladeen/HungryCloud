@@ -14,6 +14,10 @@ while True:
   if gpio.input(port.PA18) == 0:
     print("18th Button")
     time.sleep(0.5)
+  if gpio.input(port.PA19) == 0 & gpio.input(port.PA18) == 0:
+    print("death")
+    time.sleep(0.5)
+    
  
 
 
