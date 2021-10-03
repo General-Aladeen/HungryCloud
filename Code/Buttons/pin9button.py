@@ -10,6 +10,6 @@ gpio.setcfg(port.PA19, gpio.INPUT)
 while True:
   if gpio.input(port.PA19) == 0:
     print("ze button is pressed")
-    time.sleep(0.1)
+    time.sleep(0.5)
 
 
